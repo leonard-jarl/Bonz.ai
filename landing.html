@@ -16,50 +16,46 @@
     <script src="script.js"></script>
   </head>
   <body>
-      <header class="header">
-        <span
-          class="navigation__icon navigation__icon--open"
+    <header class="header">
+      <i class="navigation__icon--open"
+        ><img
+          src="Images/photos/hamburger.png"
           onclick="openHamburger()"
-          >&#9776;</span
-        >
-        <nav id="hamburger" class="header__navigation">
-          <i
-            class="navigation__icon navigation__icon--close"
-            onclick="closeHamburger()"
-            >&times;</i
-          >
-          <i class="navigation__content">
-          <a class="navigation__link" href="#">Home</a>
-          <a class="navigation__link"href="#">Our Concept</a>
-          <a class="navigation__link"href="#">Rooms</a>
-          <a class="navigation__link"href="#">Facilities</a>
-        </i>
-        </nav>
-        <a href="">
-          <button class="button header__button">Book a room</button>
-        </a>
-      </header>
-      <main class="hero">
-        <video class="background-video" autoplay muted loop>
-          <source src="Videos/water.mp4" type="video/mp4" />
-        </video>
-        <img
-          class="hero__logo"
-          src="Images/logo/Logo_white_mobile.png"
           alt=""
-        />
-        <p class="hero__text">We make eco-living modern</p>
-        <a href="">
-          <button class="button hero__button">Our Concept</button>
-        </a>
-        <a href="">
-          <button class="button hero__button">Rooms</button>
-        </a>
-      </main>
-    </section>
+      /></i>
+      <nav id="hamburger" class="header__navigation">
+        <i
+          class="navigation__icon navigation__icon--close"
+          onclick="closeHamburger()"
+          >&times;</i
+        >
+        <ul class="navigation__list">
+          <li><a class="navigation__link" href="#">Home</a></li>
+          <li><a class="navigation__link" href="#">Our Concept</a></li>
+          <li><a class="navigation__link" href="#">Rooms</a></li>
+          <li><a class="navigation__link" href="#">Facilities</a></li>
+        </ul>
+      </nav>
+      <a href="">
+        <button class="button button--color-peach">Book a room</button>
+      </a>
+    </header>
+    <main class="hero">
+      <video class="background-video" autoplay muted loop>
+        <source src="Videos/water.mp4" type="video/mp4" />
+      </video>
+      <img class="hero__logo" src="Images/logo/Logo_white_mobile.png" alt="" />
+      <p class="hero__text">We make eco-living modern</p>
+      <a href="">
+        <button class="button button--color-green">Our Concept</button>
+      </a>
+      <a href="">
+        <button class="button button--color-green">Rooms</button>
+      </a>
+    </main>
     <footer class="footer">
       <img class="footer__map" src="Images/photos/map.png" alt="" />
-      <h1 class="footer__heading">Contact us</h1>
+      <h2 class="footer__heading">Contact us</h2>
       <section class="footer__contactlist">
         <p class="footer__contact-item">BONZ.AI Hotel</p>
         <p class="footer__contact-item">Berwick</p>
@@ -72,15 +68,17 @@
         <a class="footer__info-item" href="">Privacy Policy</a>
       </section>
       <hr class="line footer__line" />
-      <h1 class="footer__heading">Social media</h1>
+      <h2 class="footer__heading">Social media</h2>
       <section class="footer__social-media">
-        <i class="footer__social-media-icon ri-facebook-circle-fill"></i>
-        <i class="footer__social-media-icon ri-instagram-fill"></i>
-        <i class="footer__social-media-icon ri-youtube-fill"></i>
-        <i class="footer__social-media-icon ri-twitter-x-line"></i>
+        <a href=""><i class="footer__social-media-icon ri-facebook-circle-fill"></i></a>
+        <a href=""><i class="footer__social-media-icon ri-instagram-fill"></i></a>
+        <a href=""><i class="footer__social-media-icon ri-youtube-fill"></i></a>
+        <a href=""><i class="footer__social-media-icon ri-twitter-x-line"></i></a>
       </section>
       <hr class="line footer__line" />
-      <button class="button footer__button">Book now</button>
+      <a href="">
+        <button class="button button--color-white">Book now</button>
+      </a>
       <img
         class="footer__logo"
         src="Images/logo/Logo_white_mobile.png"

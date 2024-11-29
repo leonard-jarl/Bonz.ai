@@ -2,7 +2,8 @@
   --white: #ffffff;
   --black: #000000;
   --green: #465956;
-  --transparent-green: #465956db;
+  --transparent-green: #465956e1;
+  --extra-transparent-green: #46595650;
   --peach: #f19069;
 }
 
@@ -11,11 +12,17 @@
   margin: 0;
   padding: 0;
   font-family: arial;
-  color: var(--white);
+  color: var(--black);
   font-size: 1rem;
 }
 
 h1 {
+  color: var(--white);
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
   font-size: 2rem;
 }
 
@@ -49,24 +56,41 @@ p {
 /* HEADER */
 .header {
   height: 15vh;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  position: fixed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--extra-transparent-green);
+  transition: 0.3s;
 }
 
+.header--not-transparent {
+  background-color: var(--green);
+  transition: 0.3s;
+}
+
+.header--not-fixed {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
 /* HAMBURGER MENU */
 .header__navigation {
+  display: flex;
   height: 100%;
   width: 0%;
   position: fixed;
+  justify-content: center;
   left: 0;
   top: 0;
   background-color: var(--green);
   background-color: var(--transparent-green);
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
+  height: 100%;
 }
 
 .navigation__icon {
@@ -75,6 +99,9 @@ p {
 }
 
 .navigation__icon--open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 4rem;
 }
 
@@ -85,27 +112,39 @@ p {
   font-size: 6rem;
 }
 
-.navigation__content {
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
   position: relative;
-  top: 25%;
-  width: 100%;
+  top: 15%;
+  width: 80%;
+  gap: 3rem;
 }
 
 .navigation__link {
   display: flex;
-  padding: 1rem;
+  justify-content: center;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2rem;
   transition: 0.3s;
   text-wrap: nowrap;
+  padding: 1.5rem 0 1.5rem 0;
+  font-weight: 800;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #2b3634;
+  color: var(--white);
+  border-top-right-radius: 4rem;
+  border-bottom-left-radius: 4rem;
 }
 
 .navigation__link:focus {
-  color: var(--peach);
+  background-color: #1c2422;
+  color: var(--white);
 }
 
 /* HEADER BUTTON */
-.header__button {
+.button--color-peach {
   color: var(--white);
   background: var(--peach);
 }
@@ -131,7 +170,7 @@ p {
   margin-top: 2rem;
 }
 
-.hero__button {
+.button--color-green {
   color: var(--white);
   background: var(--green);
   margin: 3rem 0 0 0;
@@ -163,7 +202,12 @@ p {
   margin-top: 2rem;
 }
 
+.footer__contact-item {
+  color: var(--white);
+}
+
 .footer__phonenumber {
+  color: var(--white);
   margin: 2rem 0;
 }
 
@@ -172,6 +216,10 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+.footer__info-item {
+  color: var(--white);
 }
 
 .footer__line {
@@ -200,14 +248,16 @@ p {
   border: none;
   background-color: var(--white);
   color: var(--black);
+  text-decoration: none;
 }
 
-.footer__button {
+.button--color-white {
   margin-top: 4rem;
   padding: 0.8rem 2rem;
   border-radius: 2rem;
   border: 0.3rem solid var(--white);
   background: none;
+  color: var(--white);
 }
 
 .footer__logo {
@@ -217,4 +267,46 @@ p {
 
 .footer__copyright {
   margin-bottom: 2rem;
+  color: var(--white);
+}
+
+/* ABOUT US PAGE */
+.about {
+  overflow-x: hidden;
+}
+
+.about__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 30vh;
+}
+
+.about__image--hero {
+  height: 40vh;
+  background-image: url(Images/photos/hotel.jpg);
+}
+
+.about__heading--lower {
+  padding-top: 15%;
+}
+
+.image__text {
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.about__text {
+  color: var(--black);
+  padding: 2rem 2rem;
+}
+
+.about__image--plant {
+  height: 30vh;
+  background-image: url(Images/photos/plant.png);
+}
+
+.about__image--zen-garden {
+  height: 30vh;
+  background-image: url(Images/photos/zengarden.png);
 }
