@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonz.ai Hotel</title>
+    <link rel="icon" type="image/png" href="Images/logo/Logo_white_title.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+      integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+      <header class="header">
+        <span
+          class="navigation__icon navigation__icon--open"
+          onclick="openHamburger()"
+          >&#9776;</span
+        >
+        <nav id="hamburger" class="header__navigation">
+          <i
+            class="navigation__icon navigation__icon--close"
+            onclick="closeHamburger()"
+            >&times;</i
+          >
+          <i class="navigation__content">
+          <a class="navigation__link" href="#">Home</a>
+          <a class="navigation__link"href="#">Our Concept</a>
+          <a class="navigation__link"href="#">Rooms</a>
+          <a class="navigation__link"href="#">Facilities</a>
+        </i>
+        </nav>
+        <a href="">
+          <button class="button header__button">Book a room</button>
+        </a>
+      </header>
+      <main class="hero">
+        <video class="background-video" autoplay muted loop>
+          <source src="Videos/water.mp4" type="video/mp4" />
+        </video>
+        <img
+          class="hero__logo"
+          src="Images/logo/Logo_white_mobile.png"
+          alt=""
+        />
+        <p class="hero__text">We make eco-living modern</p>
+        <a href="">
+          <button class="button hero__button">Our Concept</button>
+        </a>
+        <a href="">
+          <button class="button hero__button">Rooms</button>
+        </a>
+      </main>
+    </section>
+    <footer class="footer">
+      <img class="footer__map" src="Images/photos/map.png" alt="" />
+      <h1 class="footer__heading">Contact us</h1>
+      <section class="footer__contactlist">
+        <p class="footer__contact-item">BONZ.AI Hotel</p>
+        <p class="footer__contact-item">Berwick</p>
+        <p class="footer__contact-item">Polegate BN26 6T</p>
+      </section>
+      <p class="footer__phonenumber">Tel: 01493-770-834</p>
+      <section class="footer__infolist">
+        <a class="footer__info-item" href="">info@bonzai.com</a>
+        <a class="footer__info-item" href="">Cookies</a>
+        <a class="footer__info-item" href="">Privacy Policy</a>
+      </section>
+      <hr class="line footer__line" />
+      <h1 class="footer__heading">Social media</h1>
+      <section class="footer__social-media">
+        <i class="footer__social-media-icon ri-facebook-circle-fill"></i>
+        <i class="footer__social-media-icon ri-instagram-fill"></i>
+        <i class="footer__social-media-icon ri-youtube-fill"></i>
+        <i class="footer__social-media-icon ri-twitter-x-line"></i>
+      </section>
+      <hr class="line footer__line" />
+      <button class="button footer__button">Book now</button>
+      <img
+        class="footer__logo"
+        src="Images/logo/Logo_white_mobile.png"
+        alt=""
+      />
+      <p class="footer__copyright">© 2024 bonz.ai</p>
+    </footer>
+  </body>
+</html>
