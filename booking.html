@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Concept</title>
+    <link rel="icon" type="image/png" href="Images/logo/Logo_white_title.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+      integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header header--color-green">
+      <i class="navigation__icon--open"
+        ><img
+          src="Images/photos/hamburger.png"
+          onclick="openHamburger()"
+          alt=""
+      /></i>
+      <nav id="hamburger" class="header__navigation">
+        <i
+          class="navigation__icon navigation__icon--close"
+          onclick="closeHamburger()"
+          >&times;</i
+        >
+        <ul class="navigation__list">
+          <li><a class="navigation__link" href="#">Home</a></li>
+          <li><a class="navigation__link" href="#">Our Concept</a></li>
+          <li><a class="navigation__link" href="#">Rooms</a></li>
+          <li><a class="navigation__link" href="#">Facilities</a></li>
+        </ul>
+      </nav>
+      <a href="">
+        <button class="button button--color-peach">Book a room</button>
+      </a>
+    </header>
+    <main class="booking">
+        <section class="booking__form-container">
+        <h1 class="booking__form-heading">Booking</h1>
+        <form class="booking__form">
+            <label for="date">Date</label>
+            <input
+            class="booking__date"
+              type="date"
+              id="date"
+              placeholder="Check available"
+              required
+              pattern="[A-Za-z]+"
+              >
+        </div>
+            <label for="question">Guests</label>
+                <div><p>Adults</p>
+                    <label for="question">Children</label>
+                    <select class="question" id="question" required>
+                        <option value="">1</option>
+                        <option value="join">2</option>
+                        <option value="complaint">3</option>
+                        <option value="other">4</option>
+                        <option value="other">5</option>
+                        <option value="other">6+</option>
+                      </select>
+            </div>
+                <div><p>Children</p>
+                    <select class="question" id="question" required>
+                        <option value="">0</option>
+                        <option value="join">1</option>
+                        <option value="complaint">2</option>
+                        <option value="other">3</option>
+                        <option value="other">4</option>
+                        <option value="other">5+</option>
+                      </select>
+                    </div>
+            <button class="button booking__button" type="submit">FIND ROOM</button>
+          </form>
+        </section>
+      <article class="booking__rooms">
+        <section class="booking__room">
+          <img class="booking__image" src="Images/photos/room3.jpg" alt="" />
+          <section class="booking__description">
+          <h3 class="booking__heading">Standard room</h3>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <p class="booking__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+            deleniti qui excepturi est, architecto rerum commodi ut magni iure
+            dolores iste. Quas officia natus saepe aliquam corrupti modi,
+            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+            similique quo, incidunt voluptates esse culpa veritatis explicabo
+            cupiditate dolorum? Quis rem autem corporis.
+          </p>
+        </section>
+        </section>
+        <section class="booking__room">
+          <img class="booking__image" src="Images/photos/room4.jpg" alt="" />
+          <section class="booking__description">
+          <h3 class="booking__heading">Double room</h3>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <p class="booking__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+            deleniti qui excepturi est, architecto rerum commodi ut magni iure
+            dolores iste. Quas officia natus saepe aliquam corrupti modi,
+            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+            similique quo, incidunt voluptates esse culpa veritatis explicabo
+            cupiditate dolorum? Quis rem autem corporis.
+          </p>
+        </section>
+        </section>
+        <section class="booking__room">
+          <img class="booking__image" src="Images/photos/room6.jpg" alt="" />
+          <section class="booking__description">
+          <h3 class="booking__heading">Deluxe room</h3>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <p class="booking__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+            deleniti qui excepturi est, architecto rerum commodi ut magni iure
+            dolores iste. Quas officia natus saepe aliquam corrupti modi,
+            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+            similique quo, incidunt voluptates esse culpa veritatis explicabo
+            cupiditate dolorum? Quis rem autem corporis.
+          </p>
+        </section>
+        </section>
+        <section class="booking__room">
+          <img class="booking__image" src="Images/photos/room9.jpg" alt="" />
+          <section class="booking__description">
+          <h3 class="booking__heading">Cabin suite</h3>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <i class="booking__icon"></i>
+          <p class="booking__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+            deleniti qui excepturi est, architecto rerum commodi ut magni iure
+            dolores iste. Quas officia natus saepe aliquam corrupti modi,
+            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+            similique quo, incidunt voluptates esse culpa veritatis explicabo
+            cupiditate dolorum? Quis rem autem corporis.
+          </p>
+        </section>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+      <img class="footer__map" src="Images/photos/map.png" alt="" />
+      <h1 class="footer__heading">Contact us</h1>
+      <section class="footer__contactlist">
+        <p class="footer__contact-item">BONZ.AI Hotel</p>
+        <p class="footer__contact-item">Berwick</p>
+        <p class="footer__contact-item">Polegate BN26 6T</p>
+      </section>
+      <p class="footer__phonenumber">Tel: 01493-770-834</p>
+      <section class="footer__infolist">
+        <a class="footer__info-item" href="">info@bonzai.com</a>
+        <a class="footer__info-item" href="">Cookies</a>
+        <a class="footer__info-item" href="">Privacy Policy</a>
+      </section>
+      <hr class="line footer__line" />
+      <h1 class="footer__heading">Social media</h1>
+      <section class="footer__social-media">
+        <a class="footer__social-media-icon" href=""
+          ><i class="footer__social-media-icon ri-facebook-circle-fill"></i
+        ></a>
+        <a class="footer__social-media-icon" href=""
+          ><i class="footer__social-media-icon ri-instagram-fill"></i
+        ></a>
+        <a class="footer__social-media-icon" href=""
+          ><i class="footer__social-media-icon ri-youtube-fill"></i
+        ></a>
+        <a class="footer__social-media-icon" href=""
+          ><i class="footer__social-media-icon ri-twitter-x-line"></i
+        ></a>
+      </section>
+      <hr class="line footer__line" />
+      <a href="">
+        <button class="button button--color-white">Book now</button>
+      </a>
+      <img
+        class="footer__logo"
+        src="Images/logo/Logo_white_mobile.png"
+        alt=""
+      />
+      <p class="footer__copyright">© 2024 bonz.ai</p>
+    </footer>
+  </body>
+</html>

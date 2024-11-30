@@ -19,11 +19,11 @@
 h1 {
   color: var(--white);
   font-size: 3rem;
-  font-family: "Times New Roman", Times, serif;
 }
 
 h2 {
   font-size: 2rem;
+  color: var(--white);
 }
 
 p {
@@ -44,13 +44,14 @@ p {
 /* BACKGROUND */
 .background-video {
   object-fit: cover;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   z-index: -1;
   height: 100%;
+  width: 100%;
 }
 
 /* HEADER */
@@ -65,12 +66,13 @@ p {
   position: fixed;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: var(--extra-transparent-green);
-  transition: 0.3s;
 }
 
+.header--color-green {
+  background-color: var(--green);
+}
 .header--not-transparent {
   background-color: var(--green);
-  transition: 0.3s;
 }
 
 .header--not-fixed {
@@ -132,7 +134,7 @@ p {
   padding: 1.5rem 0 1.5rem 0;
   font-weight: 800;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: #2b3634;
+  background-color: var(--peach);
   color: var(--white);
   border-top-right-radius: 4rem;
   border-bottom-left-radius: 4rem;
@@ -165,7 +167,6 @@ p {
 }
 
 .hero__text {
-  font-family: "Times New Roman", Times, serif;
   color: var(--white);
   margin-top: 2rem;
 }
@@ -310,3 +311,113 @@ p {
   height: 30vh;
   background-image: url(Images/photos/zengarden.png);
 }
+
+/* BOOKING PAGE */
+.booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.booking__form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 9rem 2rem 4rem 2rem;
+}
+
+.booking__form-heading {
+  color: var(--black);
+  margin: 3rem 0;
+
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--green);
+  height: 30rem;
+  width: 100%;
+  min-height: 50vh;
+  border-radius: 2rem;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  height: 15%;
+  border-radius: 0.5rem;
+  padding: 0 6rem 0 2rem
+}
+
+label {
+  color: var(--white);
+}
+
+input {
+  width: 100%;
+}
+
+.booking__button {
+  width: 70%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+.question {
+  border: none;
+}
+
+.booking__rooms {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+}
+
+.booking__date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  height: 15%;
+  border-radius: 0.5rem;
+  padding: 0 6rem 0 2rem;
+  border:none;
+}
+
+.booking__room {
+  display: flex;
+  flex-direction:column;
+}
+
+.booking__image {
+  width: 120%;
+}
+
+.booking__description {
+  padding: 1rem 2rem 4rem 2rem;
+}
+
+.booking__heading {
+  margin-bottom: 2rem;
+}
+
+.booking__icon {
+
+}
+
+.booking__text {
+
+}
+
