@@ -8,6 +8,7 @@
   --extra-transparent-green: #46595650;
   --peach: #f19069;
   --peach-hover:#f37949;
+  --text-shadow:#cecece
 }
 
 * {
@@ -321,6 +322,10 @@ p {
   padding-top: 15%;
 }
 
+.about__heading--desktop {
+  display: none;
+}
+
 .image__text {
   padding: 1rem 2rem 2rem 2rem;
 }
@@ -335,9 +340,13 @@ p {
   background-image: url(Images/photos/plant.png);
 }
 
-.about__image--zen-garden {
+.about__image--zen-garden-mobile {
   height: 30vh;
   background-image: url(Images/photos/zengarden.png);
+}
+
+.about__image--zen-garden-desktop {
+  display: none;
 }
 
 /* BOOKING PAGE */
@@ -653,40 +662,116 @@ input {
   overflow-x: hidden;
 }
 
+.about__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  padding: 4rem 10rem;
+}
+
 .about__image {
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
-  height: 30vh;
+  height: 100%;
+  width: 100%;
+  min-width: 600px;
+  max-height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about__eco-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 2;
+  gap: 4rem;
+  border-top: 3px solid var(--peach);
+  border-bottom: 3px solid var(--peach);
+  padding: 2rem 0;
+}
+
+.about__vision-article {
+  padding-bottom: 2rem ;
+}
+
+.about__eco-article {
+
+}
+
+.about__zen-article {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.about__zen-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 2rem;
+  grid-column: span 2;
+}
+
+.about__founder-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-bottom: 2rem;
 }
 
 .about__image--hero {
-  height: 40vh;
+  grid-column: span 2;
+  height: 45vh;
   background-image: url(Images/photos/hotel.jpg);
+  background-position: center;
+
 }
 
 .about__heading--lower {
+  display: none;
   padding-top: 15%;
 }
 
+.about__heading--center {
+  display: none;
+}
+
+.about__heading--desktop {
+  display: block;
+  color: var(--black);
+  text-shadow: 0px 5px 4px var(--text-shadow);
+}
+
 .image__text {
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+  background-color: var(--white);
 }
 
 .about__text {
   color: var(--black);
-  padding: 2rem 2rem;
+  padding: 2rem 0 0 0;
 }
 
 .about__image--plant {
-  height: 30vh;
   background-image: url(Images/photos/plant.png);
+  background-position: right;
 }
 
-.about__image--zen-garden {
-  height: 30vh;
-  background-image: url(Images/photos/zengarden.png);
+.about__image--oliver {
+  background-image: url(Images/photos/oliver1.jpg);
+  background-position: right;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.about__image--zen-garden-mobile {
+  display: none;
+}
+
+.about__image--zen-garden-desktop {
+  margin-top: 2rem;
 }
 
 /* BOOKING PAGE */

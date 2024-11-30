@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Concept</title>
+    <title>Book a room</title>
     <link rel="icon" type="image/png" href="Images/logo/Logo_white_title.png" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -31,13 +31,19 @@
           >&times;</i
         >
         <ul class="navigation__list">
-          <li><a class="navigation__link" href="#">Home</a></li>
-          <li><a class="navigation__link" href="#">Our Concept</a></li>
+          <li><a class="navigation__link " href="landing.html">Home</a></li>
+          <li><a class="navigation__link" href="concept.html">Our Concept</a></li>
           <li><a class="navigation__link" href="#">Rooms</a></li>
           <li><a class="navigation__link" href="#">Facilities</a></li>
         </ul>
       </nav>
-      <a href="">
+      <nav class="navigation__row">
+        <section class="navigation__row-box--line-false"><a class="navigation__row-link" href="#">Home</a></section>
+        <section class="navigation__row-box--line-false"><a class="navigation__row-link" href="#">Our Concept</a></section>
+        <section class="navigation__row-box--line-false"><a class="navigation__row-link" href="#">Rooms</a></section>
+        <section class="navigation__row-box--line-false"><a class="navigation__row-link" href="#">Facilities</a></section>
+      </nav>
+      <a href="booking.html">
         <button class="button button--color-peach">Book a room</button>
       </a>
     </header>
@@ -160,9 +166,10 @@
       </article>
     </main>
     <footer class="footer">
-      <img class="footer__map" src="Images/photos/map.png" alt="" />
-      <h1 class="footer__heading">Contact us</h1>
-      <section class="footer__contactlist">
+      <section class="footer__content">
+      <section class="footer__contact">
+      <h2 class="footer__heading">Contact us</h2>
+      <section class="footer__contactlist"> 
         <p class="footer__contact-item">BONZ.AI Hotel</p>
         <p class="footer__contact-item">Berwick</p>
         <p class="footer__contact-item">Polegate BN26 6T</p>
@@ -173,31 +180,28 @@
         <a class="footer__info-item" href="">Cookies</a>
         <a class="footer__info-item" href="">Privacy Policy</a>
       </section>
-      <hr class="line footer__line" />
-      <h1 class="footer__heading">Social media</h1>
+    </section>
+    <img class="footer__logo--desktop" src="Images/logo/Logo_white_desktop_mobile.png" alt=""/>
       <section class="footer__social-media">
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-facebook-circle-fill"></i
-        ></a>
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-instagram-fill"></i
-        ></a>
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-youtube-fill"></i
-        ></a>
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-twitter-x-line"></i
-        ></a>
+        <section class="footer__social-media-and-button">
+      <h2 class="footer__heading">Social media</h2>
+      <section class="footer__social-media-icons">
+        <a class="footer__social-media-icon href="><i class="footer__social-media-icon ri-facebook-circle-fill"></i></a>
+        <a class="footer__social-media-icon href="><i class="footer__social-media-icon ri-instagram-fill"></i></a>
+        <a class="footer__social-media-icon href="><i class="footer__social-media-icon ri-youtube-fill"></i></a>
+        <a class="footer__social-media-icon href="><i class="footer__social-media-icon ri-twitter-x-line"></i></a>
       </section>
-      <hr class="line footer__line" />
       <a href="">
         <button class="button button--color-white">Book now</button>
       </a>
+    </section>
+      </section>
       <img
-        class="footer__logo"
-        src="Images/logo/Logo_white_mobile.png"
+        class="footer__logo--mobile"
+        src="Images/logo/Logo_white_desktop_mobile.png"
         alt=""
       />
+      </section>
       <p class="footer__copyright">© 2024 bonz.ai</p>
     </footer>
   </body>
