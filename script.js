@@ -13,15 +13,3 @@ $(document).on('scroll', function(){
       $('header').removeClass('header--not-transparent');
   }
 });
-
-$(document).ready(function() {
-  
-  $(window).scroll(function() {
-    
-    if ($(window).scrollTop() > 2100) {
-      $('header').addClass('header--not-fixed');
-    } else {
-      $('header').removeClass('header--not-fixed');
-    };
-  });
-});
