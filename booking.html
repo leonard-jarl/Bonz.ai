@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Concept</title>
+    <title>Book a room</title>
     <link rel="icon" type="image/png" href="Images/logo/Logo_white_title.png" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -15,6 +15,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/5a17e13dbb.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header header--color-green">
@@ -31,173 +32,311 @@
           >&times;</i
         >
         <ul class="navigation__list">
-          <li><a class="navigation__link" href="#">Home</a></li>
-          <li><a class="navigation__link" href="#">Our Concept</a></li>
-          <li><a class="navigation__link" href="#">Rooms</a></li>
-          <li><a class="navigation__link" href="#">Facilities</a></li>
+          <li><a class="navigation__link" href="landing.html">Home</a></li>
+          <li>
+            <a class="navigation__link" href="concept.html">Our Concept</a>
+          </li>
+          <li><a class="navigation__link" href="">Rooms</a></li>
+          <li><a class="navigation__link" href="">Facilities</a></li>
         </ul>
       </nav>
-      <a href="">
+      <nav class="navigation__row">
+        <section class="navigation__row-box--line-false">
+          <a class="navigation__row-link" href="landing.html">Home</a>
+        </section>
+        <section class="navigation__row-box--line-false">
+          <a class="navigation__row-link" href="concept.html">Our Concept</a>
+        </section>
+        <section class="navigation__row-box--line-false">
+          <a class="navigation__row-link" href="">Rooms</a>
+        </section>
+        <section class="navigation__row-box--line-false">
+          <a class="navigation__row-link" href="">Facilities</a>
+        </section>
+      </nav>
+      <a href="booking.html">
         <button class="button button--color-peach">Book a room</button>
       </a>
     </header>
     <main class="booking">
-        <section class="booking__form-container">
+      <section class="booking__form-container">
         <h1 class="booking__form-heading">Booking</h1>
         <form class="booking__form">
+          <section class="booking__date-section">
             <label for="date">Date</label>
             <input
-            class="booking__date"
+              class="booking__date"
               type="date"
               id="date"
               placeholder="Check available"
               required
               pattern="[A-Za-z]+"
-              >
-        </div>
+            />
+          </section>
+          <section class="booking__guests-section">
             <label for="question">Guests</label>
-                <div><p>Adults</p>
-                    <label for="question">Children</label>
-                    <select class="question" id="question" required>
-                        <option value="">1</option>
-                        <option value="join">2</option>
-                        <option value="complaint">3</option>
-                        <option value="other">4</option>
-                        <option value="other">5</option>
-                        <option value="other">6+</option>
-                      </select>
+            <div>
+              <p>Adults</p>
+              <label for="question">Children</label>
+              <select class="question" id="question" required>
+                <option value="">1</option>
+                <option value="join">2</option>
+                <option value="complaint">3</option>
+                <option value="other">4</option>
+                <option value="other">5</option>
+                <option value="other">6+</option>
+              </select>
             </div>
-                <div><p>Children</p>
-                    <select class="question" id="question" required>
-                        <option value="">0</option>
-                        <option value="join">1</option>
-                        <option value="complaint">2</option>
-                        <option value="other">3</option>
-                        <option value="other">4</option>
-                        <option value="other">5+</option>
-                      </select>
-                    </div>
-            <button class="button booking__button" type="submit">FIND ROOM</button>
-          </form>
-        </section>
+          </section>
+          <section
+            class="booking__guests-section booking__guests-section--children"
+          >
+            <div>
+              <p>Children</p>
+              <select class="question" id="question" required>
+                <option value="">0</option>
+                <option value="join">1</option>
+                <option value="complaint">2</option>
+                <option value="other">3</option>
+                <option value="other">4</option>
+                <option value="other">5+</option>
+              </select>
+            </div>
+          </section>
+          <button class="button booking__button" type="submit">
+            FIND ROOM
+          </button>
+        </form>
+      </section>
       <article class="booking__rooms">
+        <h2 class="booking__search-heading">Available rooms between:<br>February 13 - February 15</h2>
         <section class="booking__room">
           <img class="booking__image" src="Images/photos/room3.jpg" alt="" />
           <section class="booking__description">
-          <h3 class="booking__heading">Standard room</h3>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <p class="booking__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-            deleniti qui excepturi est, architecto rerum commodi ut magni iure
-            dolores iste. Quas officia natus saepe aliquam corrupti modi,
-            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-            similique quo, incidunt voluptates esse culpa veritatis explicabo
-            cupiditate dolorum? Quis rem autem corporis.
-          </p>
-        </section>
+            <section class="booking__title">
+              <h3 class="booking__heading">Standard room
+                <i class="fa-solid fa-person"></i>
+              </h3>
+              <section class="booking__icons">
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-vault"></i>
+                <i class="fa-solid fa-shower"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-wifi"></i>
+              </section>
+            </section>
+            <section class="booking__text-wrapper">
+            <p class="booking__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Quas officia natus saepe aliquam corrupti modi,
+              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+              similique quo, incidunt voluptates esse culpa veritatis explicabo
+              cupiditate dolorum? Quis rem autem corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste.</p>
+              <section class="booking__price">
+                <p class="price"><b class="price__cost">£90</b class="price__text"> per night</p>
+                  <a href="booking.html">
+        <button class="button button--color-peach">Book a room</button>
+      </a>
+              </section>
+          </section>
+          </section>
         </section>
         <section class="booking__room">
           <img class="booking__image" src="Images/photos/room4.jpg" alt="" />
           <section class="booking__description">
-          <h3 class="booking__heading">Double room</h3>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <p class="booking__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-            deleniti qui excepturi est, architecto rerum commodi ut magni iure
-            dolores iste. Quas officia natus saepe aliquam corrupti modi,
-            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-            similique quo, incidunt voluptates esse culpa veritatis explicabo
-            cupiditate dolorum? Quis rem autem corporis.
-          </p>
-        </section>
+            <section class="booking__title">
+              <h3 class="booking__heading">Double room 
+                <i class="fa-solid fa-person"></i>
+                <i class="fa-solid fa-person-dress"></i>
+              </h3>
+              <section class="booking__icons">
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-vault"></i>
+                <i class="fa-solid fa-bath"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-wifi"></i>
+              </section>
+            </section>
+            <section class="booking__text-wrapper">
+            <p class="booking__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Quas officia natus saepe aliquam corrupti modi,
+              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+              similique quo, incidunt voluptates esse culpa veritatis explicabo
+              cupiditate dolorum? Quis rem autem corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste.</p>
+              <section class="booking__price">
+                <p class="price"><b class="price__cost">£140</b class="price__text"> per night</p>
+                  <a href="booking.html">
+        <button class="button button--color-peach">Book a room</button>
+      </a>
+              </section>
+          </section>
+          </section>
         </section>
         <section class="booking__room">
           <img class="booking__image" src="Images/photos/room6.jpg" alt="" />
           <section class="booking__description">
-          <h3 class="booking__heading">Deluxe room</h3>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <p class="booking__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-            deleniti qui excepturi est, architecto rerum commodi ut magni iure
-            dolores iste. Quas officia natus saepe aliquam corrupti modi,
-            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-            similique quo, incidunt voluptates esse culpa veritatis explicabo
-            cupiditate dolorum? Quis rem autem corporis.
-          </p>
-        </section>
+            <section class="booking__title">
+              <h3 class="booking__heading">Deluxe room
+                <i class="fa-solid fa-person"></i>
+                <i class="fa-solid fa-person-dress"></i>
+                <i class="fa-solid fa-plus"></i>
+              </h3>
+              <section class="booking__icons">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-vault"></i>
+                <i class="fa-solid fa-bath"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-wifi"></i>
+              </section>
+            </section>
+            <section class="booking__text-wrapper">
+            <p class="booking__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Quas officia natus saepe aliquam corrupti modi,
+              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+              similique quo, incidunt voluptates esse culpa veritatis explicabo
+              cupiditate dolorum? Quis rem autem corporis. deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Quas officia natus saepe aliquam corrupti modi,
+              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+              similique quo, incidunt voluptates esse culpa veritatis explicabo
+              cupiditate dolorum? Quis rem autem corporis. deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Quas officia natus saepe aliquam corrupti modi,
+              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+              similique quo, incidunt voluptates esse culpa veritatis explicabo
+              cupiditate dolorum? Quis rem autem corporis.</p>
+              <section class="booking__price">
+                <p class="price"><b class="price__cost">£190</b class="price__text"> per night</p>
+                  <a href="booking.html">
+        <button class="button button--color-peach">Book a room</button>
+      </a>
+              </section>
+          </section>
+          </section>
         </section>
         <section class="booking__room">
           <img class="booking__image" src="Images/photos/room9.jpg" alt="" />
           <section class="booking__description">
-          <h3 class="booking__heading">Cabin suite</h3>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <i class="booking__icon"></i>
-          <p class="booking__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-            facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-            deleniti qui excepturi est, architecto rerum commodi ut magni iure
-            dolores iste. Quas officia natus saepe aliquam corrupti modi,
-            molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-            similique quo, incidunt voluptates esse culpa veritatis explicabo
-            cupiditate dolorum? Quis rem autem corporis.
-          </p>
-        </section>
+            <section class="booking__title">
+              <h3 class="booking__heading">Modern cabin suite
+                <i class="fa-solid fa-person"></i>
+                <i class="fa-solid fa-person-dress"></i>
+              </h3>
+              <section class="booking__icons">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <i class="fa-solid fa-mug-hot"></i>
+                <i class="fa-solid fa-vault"></i>
+                <i class="fa-solid fa-bath"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-wifi"></i>
+            </section>
+            </section>
+            <section class="booking__text-wrapper">
+            <p class="booking__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni iure
+              dolores iste. Quas officia natus saepe aliquam corrupti modi,
+              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+              similique quo, incidunt voluptates esse culpa veritatis explicabo
+              cupiditate dolorum? Quis rem autem corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturiLorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi.  Quas officia natus saepe aliquam corrupti modi,
+              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
+              similique quo, incidunt voluptates esse culpa veritatis explicabo
+              cupiditate dolorum?</p>
+              <section class="booking__price">
+                <p class="price"><b class="price__cost">£250</b class="price__text"> per night</p>
+                  <a href="booking.html">
+        <button class="button button--color-peach">Book a room</button>
+      </a>
+              </section>
+          </section>
+          </section>
         </section>
       </article>
     </main>
     <footer class="footer">
-      <img class="footer__map" src="Images/photos/map.png" alt="" />
-      <h1 class="footer__heading">Contact us</h1>
-      <section class="footer__contactlist">
-        <p class="footer__contact-item">BONZ.AI Hotel</p>
-        <p class="footer__contact-item">Berwick</p>
-        <p class="footer__contact-item">Polegate BN26 6T</p>
+      <section class="footer__content">
+        <section class="footer__contact">
+          <h2 class="footer__heading">Contact us</h2>
+          <section class="footer__contactlist">
+            <p class="footer__contact-item">BONZ.AI Hotel</p>
+            <p class="footer__contact-item">Berwick</p>
+            <p class="footer__contact-item">Polegate BN26 6T</p>
+          </section>
+          <p class="footer__phonenumber">Tel: 01493-770-834</p>
+          <section class="footer__infolist">
+            <a class="footer__info-item" href="">info@bonzai.com</a>
+            <a class="footer__info-item" href="">Cookies</a>
+            <a class="footer__info-item" href="">Privacy Policy</a>
+          </section>
+        </section>
+        <img
+          class="footer__logo--desktop"
+          src="Images/logo/Logo_white_desktop_mobile.png"
+          alt=""
+        />
+        <section class="footer__social-media">
+          <section class="footer__social-media-and-button">
+            <h2 class="footer__heading">Social media</h2>
+            <section class="footer__social-media-icons">
+              <a class="footer__social-media-icon href="
+                ><i
+                  class="footer__social-media-icon ri-facebook-circle-fill"
+                ></i
+              ></a>
+              <a class="footer__social-media-icon href="
+                ><i class="footer__social-media-icon ri-instagram-fill"></i
+              ></a>
+              <a class="footer__social-media-icon href="
+                ><i class="footer__social-media-icon ri-youtube-fill"></i
+              ></a>
+              <a class="footer__social-media-icon href="
+                ><i class="footer__social-media-icon ri-twitter-x-line"></i
+              ></a>
+            </section>
+            <a href="booking.html">
+              <button class="button button--color-white">Book now</button>
+            </a>
+          </section>
+        </section>
+        <img
+          class="footer__logo--mobile"
+          src="Images/logo/Logo_white_desktop_mobile.png"
+          alt=""
+        />
       </section>
-      <p class="footer__phonenumber">Tel: 01493-770-834</p>
-      <section class="footer__infolist">
-        <a class="footer__info-item" href="">info@bonzai.com</a>
-        <a class="footer__info-item" href="">Cookies</a>
-        <a class="footer__info-item" href="">Privacy Policy</a>
-      </section>
-      <hr class="line footer__line" />
-      <h1 class="footer__heading">Social media</h1>
-      <section class="footer__social-media">
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-facebook-circle-fill"></i
-        ></a>
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-instagram-fill"></i
-        ></a>
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-youtube-fill"></i
-        ></a>
-        <a class="footer__social-media-icon" href=""
-          ><i class="footer__social-media-icon ri-twitter-x-line"></i
-        ></a>
-      </section>
-      <hr class="line footer__line" />
-      <a href="">
-        <button class="button button--color-white">Book now</button>
-      </a>
-      <img
-        class="footer__logo"
-        src="Images/logo/Logo_white_mobile.png"
-        alt=""
-      />
       <p class="footer__copyright">© 2024 bonz.ai</p>
     </footer>
   </body>
