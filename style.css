@@ -353,10 +353,40 @@ p {
 
 .article__image--plant {
   background-image: url(Images/photos/plant.png);
-  font-size: 1.5rem;
-  align-self: center;
 }
 
+.article__image--oliver {
+  background-image: url(Images/photos/oliver.jpg);
+  align-items: flex-end;
+}
+
+.article__image--zen-garden {
+  background-image: url(Images/photos/zengarden.png);
+}
+
+.article__heading--desktop {
+  display: none;
+}
+
+.article__heading--mobile {
+  text-shadow: 0px 5px 4px var(--green);
+}
+
+.article__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.article__paragraph {
+  color: var(--black);
+  padding: 1rem 0 0 0;
+  width: 100%;
+  text-align: justify;
+}
+
+/* BOOKING PAGE */
 .question {
   border: none;
 }
@@ -549,35 +579,56 @@ p {
   margin-top: 2rem;
 }
 
-.article__image--oliver {
-  background-image: url(Images/photos/oliver.jpg);
-  align-items: flex-end;
+/* ABOUT US PAGE */
+.about__main {
+  padding: 4rem 10rem;
+}
+.about__hero {
+  height: 45vh;
 }
 
-.article__image--zen-garden {
-  background-image: url(Images/photos/zengarden.png);
-}
-
-.article__heading--desktop {
+.hero__heading {
   display: none;
 }
 
+.about__article {
+  flex-direction: row;
+  padding: 4rem 0;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+.about__article--vision {
+  flex-direction: row-reverse;
+}
+
+.about__article--eco {
+  border-top: 3px solid var(--peach);
+  border-bottom: 3px solid var(--peach);
+}
+
+.about__article--zen {
+  flex-direction: row-reverse;
+}
+
+.article__image {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 65%;
+  margin-top: 1rem;
+}
+
+.article__heading--desktop {
+  color: var(--black);
+  display: block;
+}
+
 .article__heading--mobile {
-  text-shadow: 0px 5px 4px var(--green);
+  display: none;
 }
 
 .article__text {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 2rem 2rem 2rem;
-}
-
-.article__paragraph {
-  color: var(--black);
-  padding: 1rem 0 0 0;
-  width: 100%;
-  text-align: justify;
+  width: 35%;
+  padding: 0;
 }
 
 /* BOOKING PAGE */
