@@ -283,7 +283,6 @@ p {
 }
 
 .button--color-white {
-  margin-top: 4rem;
   padding: 0.8rem 2rem;
   border-radius: 2rem;
   border: 0.3rem solid var(--white);
@@ -294,6 +293,7 @@ p {
 .footer__logo--mobile {
   width: 50%;
   margin: 4rem 0;
+  min-width: 200px;
 }
 
 .footer__logo--desktop {
@@ -502,9 +502,9 @@ input {
 
 .navigation__row {
   display: flex;
-  width: 60%;
   height: 2rem;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
 
 .navigation__row-link {
@@ -602,6 +602,11 @@ input {
   justify-self: center;
   top: 10%;
   width: 60%;
+  min-width: 200px;
+}
+
+.footer__booking-button {
+  margin-top: 2rem;
 }
 
 .footer__social-media {
