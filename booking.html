@@ -21,7 +21,14 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/5a17e13dbb.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5a17e13dbb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   </head>
   <body>
     <header class="header header--color-green">
@@ -32,10 +39,10 @@
           alt=""
       /></i>
       <nav id="hamburger" class="header__navigation">
-        <i
+        <span
           class="navigation__icon navigation__icon--close"
           onclick="closeHamburger()"
-          >&times;</i
+          >&times;</span
         >
         <ul class="navigation__list">
           <li><a class="navigation__link" href="landing.html">Home</a></li>
@@ -65,229 +72,273 @@
       </a>
     </header>
     <main class="booking">
-      <section class="booking__form-container">
-        <h1 class="booking__form-heading">Booking</h1>
-        <form class="booking__form">
-          <section class="booking__date-section">
-            <label for="date">Date</label>
-            <input
-              class="booking__date"
-              type="date"
-              id="date"
-              placeholder="Check available"
-              required
-              pattern="[A-Za-z]+"
-            />
+      <h1 class="booking__heading">Booking</h1>
+      <form class="booking__form">
+        <section class="form__date">
+          <label class="form__label" for="date__input">Date</label>
+          <section class="form__field form__field--date">
+            <i class="form__icon fa-solid fa-calendar-day"></i>
+          <input class="date__input" type="text" name="date" value="Check Available" readonly/>
+        </section>
+        </section>
+        <section class="form__guests--mobile">
+          <label class="form__label" for="guests__input">Guests</label>
+          <section class="form__field">
+            <label class="guests__label" for="adults">Adults</label>
+            <select class="guests__input" name="adults" placeholder="2">
+              <option class="guests__option" value="1">1</option>
+              <option class="guests__option" value="2">2</option>
+              <option class="guests__option" value="3">3</option>
+              <option class="guests__option" value="4">4</option>
+              <option class="guests__option" value="5">5</option>
+              <option class="guests__option" value="6+">6+</option>
+            </select>
           </section>
-          <section class="booking__guests-section">
-            <label for="question">Guests</label>
-            <div>
-              <p>Adults</p>
-              <label for="question">Children</label>
-              <select class="question" id="question" required>
-                <option value="">1</option>
-                <option value="join">2</option>
-                <option value="complaint">3</option>
-                <option value="other">4</option>
-                <option value="other">5</option>
-                <option value="other">6+</option>
-              </select>
-            </div>
+          <section class="form__field">
+            <label class="guests__label" for="children">Children</label>
+            <select class="guests__input" name="children">
+              <option class="guests__option" value="0">0</option>
+              <option class="guests__option" value="1">1</option>
+              <option class="guests__option" value="2">2</option>
+              <option class="guests__option" value="3">3</option>
+              <option class="guests__option" value="4">4</option>
+              <option class="guests__option" value="5+">5+</option>
+            </select>
           </section>
-          <section
-            class="booking__guests-section booking__guests-section--children"
-          >
-            <div>
-              <p>Children</p>
-              <select class="question" id="question" required>
-                <option value="">0</option>
-                <option value="join">1</option>
-                <option value="complaint">2</option>
-                <option value="other">3</option>
-                <option value="other">4</option>
-                <option value="other">5+</option>
-              </select>
-            </div>
+        </section>
+        <section class="form__guests--desktop">
+          <label class="form__label" for="guests__input">Guests</label>
+          <section class="form__field">
+            <section class="guests__adults">
+            <label class="guests__label" for="adults">Adults</label>
+            <select class="guests__input" name="adults">
+              <option class="guests__option" value="1">1</option>
+              <option class="guests__option" value="2">2</option>
+              <option class="guests__option" value="3">3</option>
+              <option class="guests__option" value="4">4</option>
+              <option class="guests__option" value="5">5</option>
+              <option class="guests__option" value="6+">6+</option>
+            </select>
           </section>
-          <button class="button booking__button" type="submit">
-            FIND ROOM
-          </button>
-        </form>
-      </section>
+          <section class="guests__children">
+              <label class="guests__label" for="children">Children</label>
+            <select class="guests__input" name="children">
+              <option class="guests__option" value="0">0</option>
+              <option class="guests__option" value="1">1</option>
+              <option class="guests__option" value="2">2</option>
+              <option class="guests__option" value="3">3</option>
+              <option class="guests__option" value="4">4</option>
+              <option class="guests__option" value="5+">5+</option>
+            </select>
+          </section>
+          </section>
+        </section>
+        <button class="button form__button" type="submit">FIND ROOM</button>
+      </form>
       <article class="booking__rooms">
-        <h2 class="booking__search-heading">Available rooms between:<br>February 13 - February 15</h2>
+        <h2 class="booking__search-heading">
+          Available rooms between:<br />February 13 - February 15
+        </h2>
+        <hr class="booking__line">
         <section class="booking__room">
-          <img class="booking__image" src="Images/photos/room3.jpg" alt="" />
-          <section class="booking__description">
-            <section class="booking__title">
-              <h3 class="booking__heading">Standard room
-                <i class="fa-solid fa-person"></i>
+          <img class="room__image" src="Images/photos/room3.jpg" alt="" />
+          <section class="room__description">
+            <section class="description__title">
+              <section class="title__left">
+                <h3 class="title__heading">Standard room
+                <i class="title__icon fa-solid fa-person"></i>
               </h3>
-              <section class="booking__icons">
-                <i class="fa-solid fa-mug-hot"></i>
-                <i class="fa-solid fa-vault"></i>
-                <i class="fa-solid fa-shower"></i>
-                <i class="fa-solid fa-phone"></i>
-                <i class="fa-solid fa-wifi"></i>
+            </section>
+              <section class="title__right">
+                <i class="title__icon fa-solid fa-mug-hot"></i>
+                <i class="title__icon fa-solid fa-vault"></i>
+                <i class="title__icon fa-solid fa-shower"></i>
+                <i class="title__icon fa-solid fa-phone"></i>
+                <i class="title__icon fa-solid fa-wifi"></i>
               </section>
             </section>
-            <section class="booking__text-wrapper">
-            <p class="booking__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Quas officia natus saepe aliquam corrupti modi,
-              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-              similique quo, incidunt voluptates esse culpa veritatis explicabo
-              cupiditate dolorum? Quis rem autem corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste.</p>
-              <section class="booking__price">
-                <p class="price"><b class="price__cost">£90</b class="price__text"> per night</p>
-                  <a href="booking.html">
-        <button class="button button--color-peach">Book a room</button>
-      </a>
+              <p class="description__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                facilis ad neque blanditiis vero consequuntur velit? Suscipit
+                vero deleniti qui excepturi est, architecto rerum commodi ut
+                magni iure dolores iste. Quas officia natus saepe aliquam
+                corrupti modi, molestiae dolorem rem nostrum dolor possimus
+                harum quisquam nemo similique quo, incidunt voluptates esse
+                culpa veritatis explicabo cupiditate dolorum? Quis rem autem
+                corporis. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Rem facilis ad neque blanditiis vero consequuntur velit?
+                Suscipit vero deleniti qui excepturi est, architecto rerum
+                commodi ut magni iure dolores iste.Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Rem facilis ad neque blanditiis
+                vero consequuntur velit? Suscipit vero deleniti qui excepturi
+                est, architecto rerum commodi ut magni iure dolores iste.Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis
+                ad neque blanditiis vero consequuntur velit? Suscipit vero
+                deleniti qui excepturi est, architecto rerum commodi ut magni
+                iure dolores iste.
+              </p>
+              <section class="description__price">
+                <p class="price"><b class="price__cost">£90</b>/ night</p>
+                <a href="booking.html">
+                  <button class="button button--color-peach">
+                    Pick room
+                  </button>
+                </a>
               </section>
+            </section>
+          </section>
+        </section>
+        <hr class="booking__line">
+        <section class="booking__room">
+          <img class="room__image" src="Images/photos/room4.jpg" alt="" />
+          <section class="room__description">
+            <section class="description__title">
+              <section class="title__left">
+                <h3 class="title__heading">Double room
+                <i class="title__icon fa-solid fa-person"></i>
+                <i class="title__icon fa-solid fa-person-dress"></i>
+              </h3>
+            </section>
+              <section class="title__right">
+                <i class="title__icon fa-solid fa-mug-hot"></i>
+                <i class="title__icon fa-solid fa-vault"></i>
+                <i class="title__icon fa-solid fa-bath"></i>
+                <i class="title__icon fa-solid fa-phone"></i>
+                <i class="title__icon fa-solid fa-wifi"></i>
+              </section>
+            </section>
+              <p class="description__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                facilis ad neque blanditiis vero consequuntur velit? Suscipit
+                vero deleniti qui excepturi est, architecto rerum commodi ut
+                magni iure dolores iste. Quas officia natus saepe aliquam
+                corrupti modi, molestiae dolorem rem nostrum dolor possimus
+                harum quisquam nemo similique quo, incidunt voluptates esse
+                culpa veritatis explicabo cupiditate dolorum? Quis rem autem
+                corporis. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Rem facilis ad neque blanditiis vero consequuntur velit?
+                Suscipit vero deleniti qui excepturi est, architecto rerum
+                commodi ut magni iure dolores iste.Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Rem facilis ad neque blanditiis
+                vero consequuntur velit? Suscipit vero deleniti qui excepturi
+                est, architecto rerum commodi ut magni iure dolores iste.Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis
+                ad neque blanditiis vero consequuntur velit? Suscipit vero
+                deleniti qui excepturi est, architecto rerum commodi ut magni
+                iure dolores iste.
+              </p>
+              <section class="description__price">
+                <p class="price"><b class="price__cost">£140</b>/ night</p>
+                <a href="booking.html">
+                  <button class="button button--color-peach">
+                    Pick room
+                  </button>
+                </a>
+              </section>
+            </section>
+            </section>
+          </section>
+          <hr class="booking__line">
+        <section class="booking__room">
+          <img class="room__image" src="Images/photos/room6.jpg" alt="" />
+          <section class="room__description">
+            <section class="description__title">
+              <section class="title__left">
+                <h3 class="title__heading">Deluxe room
+                <i class="title__icon fa-solid fa-person"></i>
+                <i class="title__icon fa-solid fa-person-dress"></i>
+                <i class="title__icon fa-solid fa-plus"></i>
+              </h3>
+            </section>
+              <section class="title__right">
+                <i class="title__icon fa-solid fa-champagne-glasses"></i>
+                <i class="title__icon fa-solid fa-mug-hot"></i>
+                <i class="title__icon fa-solid fa-vault"></i>
+                <i class="title__icon fa-solid fa-bath"></i>
+                <i class="title__icon fa-solid fa-phone"></i>
+                <i class="title__icon fa-solid fa-wifi"></i>
+              </section>
+            </section>
+            <p class="description__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+              facilis ad neque blanditiis vero consequuntur velit? Suscipit
+              vero deleniti qui excepturi est, architecto rerum commodi ut
+              magni iure dolores iste. Quas officia natus saepe aliquam
+              corrupti modi, molestiae dolorem rem nostrum dolor possimus
+              harum quisquam nemo similique quo, incidunt voluptates esse
+              culpa veritatis explicabo cupiditate dolorum? Quis rem autem
+              corporis. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Rem facilis ad neque blanditiis vero consequuntur velit?
+              Suscipit vero deleniti qui excepturi est, architecto rerum
+              commodi ut magni iure dolores iste.Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Rem facilis ad neque blanditiis
+              vero consequuntur velit? Suscipit vero deleniti qui excepturi
+              est, architecto rerum commodi ut magni iure dolores iste.Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis
+              ad neque blanditiis vero consequuntur velit? Suscipit vero
+              deleniti qui excepturi est, architecto rerum commodi ut magni
+              iure dolores iste.
+            </p>
+            <section class="description__price">
+              <p class="price"><b class="price__cost">£190</b>/ night</p>
+              <a href="booking.html">
+                <button class="button button--color-peach">
+                  Pick room
+                </button>
+              </a>
+            </section>
           </section>
           </section>
         </section>
+        <hr class="booking__line">
         <section class="booking__room">
-          <img class="booking__image" src="Images/photos/room4.jpg" alt="" />
-          <section class="booking__description">
-            <section class="booking__title">
-              <h3 class="booking__heading">Double room 
-                <i class="fa-solid fa-person"></i>
-                <i class="fa-solid fa-person-dress"></i>
+          <img class="room__image" src="Images/photos/room9.jpg" alt="" />
+          <section class="room__description">
+            <section class="description__title">
+              <section class="title__left">
+                <h3 class="title__heading">Cabin Suite
+                <i class="title__icon fa-solid fa-person"></i>
+                <i class="title__icon fa-solid fa-person-dress"></i>
               </h3>
-              <section class="booking__icons">
-                <i class="fa-solid fa-mug-hot"></i>
-                <i class="fa-solid fa-vault"></i>
-                <i class="fa-solid fa-bath"></i>
-                <i class="fa-solid fa-phone"></i>
-                <i class="fa-solid fa-wifi"></i>
+            </section>
+              <section class="title__right">
+                <i class="title__icon fa-solid fa-champagne-glasses"></i>
+                <i class="title__icon fa-solid fa-mug-hot"></i>
+                <i class="title__icon fa-solid fa-vault"></i>
+                <i class="title__icon fa-solid fa-bath"></i>
+                <i class="title__icon fa-solid fa-phone"></i>
+                <i class="title__icon fa-solid fa-wifi"></i>
               </section>
             </section>
-            <section class="booking__text-wrapper">
-            <p class="booking__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Quas officia natus saepe aliquam corrupti modi,
-              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-              similique quo, incidunt voluptates esse culpa veritatis explicabo
-              cupiditate dolorum? Quis rem autem corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste.</p>
-              <section class="booking__price">
-                <p class="price"><b class="price__cost">£140</b class="price__text"> per night</p>
-                  <a href="booking.html">
-        <button class="button button--color-peach">Book a room</button>
-      </a>
-              </section>
-          </section>
-          </section>
-        </section>
-        <section class="booking__room">
-          <img class="booking__image" src="Images/photos/room6.jpg" alt="" />
-          <section class="booking__description">
-            <section class="booking__title">
-              <h3 class="booking__heading">Deluxe room
-                <i class="fa-solid fa-person"></i>
-                <i class="fa-solid fa-person-dress"></i>
-                <i class="fa-solid fa-plus"></i>
-              </h3>
-              <section class="booking__icons">
-                <i class="fa-solid fa-champagne-glasses"></i>
-                <i class="fa-solid fa-mug-hot"></i>
-                <i class="fa-solid fa-vault"></i>
-                <i class="fa-solid fa-bath"></i>
-                <i class="fa-solid fa-phone"></i>
-                <i class="fa-solid fa-wifi"></i>
+              <p class="description__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+                facilis ad neque blanditiis vero consequuntur velit? Suscipit
+                vero deleniti qui excepturi est, architecto rerum commodi ut
+                magni iure dolores iste. Quas officia natus saepe aliquam
+                corrupti modi, molestiae dolorem rem nostrum dolor possimus
+                harum quisquam nemo similique quo, incidunt voluptates esse
+                culpa veritatis explicabo cupiditate dolorum? Quis rem autem
+                corporis. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Rem facilis ad neque blanditiis vero consequuntur velit?
+                Suscipit vero deleniti qui excepturi est, architecto rerum
+                commodi ut magni iure dolores iste.Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Rem facilis ad neque blanditiis
+                vero consequuntur velit? Suscipit vero deleniti qui excepturi
+                est, architecto rerum commodi ut magni iure dolores iste.Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis
+                ad neque blanditiis vero consequuntur velit? Suscipit vero
+                deleniti qui excepturi est, architecto rerum commodi ut magni
+                iure dolores iste.
+              </p>
+              <section class="description__price">
+                <p class="price"><b class="price__cost">£250</b>/ night</p>
+                <a href="booking.html">
+                  <button class="button button--color-peach">
+                    Pick room
+                  </button>
+                </a>
               </section>
             </section>
-            <section class="booking__text-wrapper">
-            <p class="booking__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Quas officia natus saepe aliquam corrupti modi,
-              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-              similique quo, incidunt voluptates esse culpa veritatis explicabo
-              cupiditate dolorum? Quis rem autem corporis. deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Quas officia natus saepe aliquam corrupti modi,
-              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-              similique quo, incidunt voluptates esse culpa veritatis explicabo
-              cupiditate dolorum? Quis rem autem corporis. deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Quas officia natus saepe aliquam corrupti modi,
-              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-              similique quo, incidunt voluptates esse culpa veritatis explicabo
-              cupiditate dolorum? Quis rem autem corporis.</p>
-              <section class="booking__price">
-                <p class="price"><b class="price__cost">£190</b class="price__text"> per night</p>
-                  <a href="booking.html">
-        <button class="button button--color-peach">Book a room</button>
-      </a>
-              </section>
-          </section>
-          </section>
-        </section>
-        <section class="booking__room">
-          <img class="booking__image" src="Images/photos/room9.jpg" alt="" />
-          <section class="booking__description">
-            <section class="booking__title">
-              <h3 class="booking__heading">Modern cabin suite
-                <i class="fa-solid fa-person"></i>
-                <i class="fa-solid fa-person-dress"></i>
-              </h3>
-              <section class="booking__icons">
-                <i class="fa-solid fa-champagne-glasses"></i>
-                <i class="fa-solid fa-mug-hot"></i>
-                <i class="fa-solid fa-vault"></i>
-                <i class="fa-solid fa-bath"></i>
-                <i class="fa-solid fa-phone"></i>
-                <i class="fa-solid fa-wifi"></i>
-            </section>
-            </section>
-            <section class="booking__text-wrapper">
-            <p class="booking__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi est, architecto rerum commodi ut magni iure
-              dolores iste. Quas officia natus saepe aliquam corrupti modi,
-              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-              similique quo, incidunt voluptates esse culpa veritatis explicabo
-              cupiditate dolorum? Quis rem autem corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturiLorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-              facilis ad neque blanditiis vero consequuntur velit? Suscipit vero
-              deleniti qui excepturi.  Quas officia natus saepe aliquam corrupti modi,
-              molestiae dolorem rem nostrum dolor possimus harum quisquam nemo
-              similique quo, incidunt voluptates esse culpa veritatis explicabo
-              cupiditate dolorum?</p>
-              <section class="booking__price">
-                <p class="price"><b class="price__cost">£250</b class="price__text"> per night</p>
-                  <a href="booking.html">
-        <button class="button button--color-peach">Book a room</button>
-      </a>
-              </section>
-          </section>
           </section>
         </section>
       </article>
@@ -303,9 +354,19 @@
           </section>
           <p class="footer__phonenumber">Tel: 01493-770-834</p>
           <section class="footer__infolist">
-            <a class="footer__info-item" href="">info@bonzai.com</a>
-            <a class="footer__info-item" href="">Cookies</a>
-            <a class="footer__info-item" href="">Privacy Policy</a>
+            <a class="footer__info-item" href="mailto: info@bonzai.com"
+              >info@bonzai.com</a
+            >
+            <a
+              class="footer__info-item"
+              href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/1920px-2ChocolateChipCookies.jpg"
+              >Cookies</a
+            >
+            <a
+              class="footer__info-item"
+              href="https://www.politico.eu/cdn-cgi/image/width=1160,height=772,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/08/16/iStock-837345268.jpg"
+              >Privacy Policy</a
+            >
           </section>
         </section>
         <img
@@ -317,22 +378,28 @@
           <section class="footer__social-media-and-button">
             <h2 class="footer__heading">Social media</h2>
             <section class="footer__social-media-icons">
-              <a class="footer__social-media-icon href="
+              <a
+                class="footer__social-media-icon"
+                href="https://www.facebook.com/"
                 ><i
                   class="footer__social-media-icon ri-facebook-circle-fill"
                 ></i
               ></a>
-              <a class="footer__social-media-icon href="
+              <a
+                class="footer__social-media-icon"
+                href="https://www.instagram.com/"
                 ><i class="footer__social-media-icon ri-instagram-fill"></i
               ></a>
-              <a class="footer__social-media-icon href="
+              <a
+                class="footer__social-media-icon"
+                href="https://www.youtube.com/"
                 ><i class="footer__social-media-icon ri-youtube-fill"></i
               ></a>
-              <a class="footer__social-media-icon href="
+              <a class="footer__social-media-icon" href="https://www.x.com/"
                 ><i class="footer__social-media-icon ri-twitter-x-line"></i
               ></a>
             </section>
-            <a href="booking.html">
+            <a class="footer__booking-button" href="booking.html">
               <button class="button button--color-white">Book now</button>
             </a>
           </section>

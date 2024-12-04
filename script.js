@@ -13,3 +13,23 @@ $(document).on('scroll', function(){
       $('header').removeClass('header--not-transparent');
   }
 });
+
+
+$(function() {
+
+  $('input[name="date"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+          cancelLabel: 'Clear'
+      }
+  });
+
+  $('input[name="date"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('DD/MM') + ' - ' + picker.endDate.format('DD/MM'));
+  });
+
+  $('input[name="date"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+
+});
