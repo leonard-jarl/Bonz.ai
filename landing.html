@@ -24,86 +24,108 @@
   </head>
   <body>
     <header class="header">
-      <i class="navigation__icon--open"
+      <span class="header__icon"
         ><img
           src="Images/photos/hamburger.png"
           onclick="openHamburger()"
           alt=""
-      /></i>
-      <nav id="hamburger" class="header__navigation">
-        <i
-          class="navigation__icon navigation__icon--close"
-          onclick="closeHamburger()"
-          >&times;</i
-        >
-        <ul class="navigation__list">
-          <li><a class="navigation__link " href="landing.html">Home</a></li>
-          <li><a class="navigation__link" href="concept.html">Concept</a></li>
-          <li><a class="navigation__link" href="">Rooms</a></li>
-          <li><a class="navigation__link" href="">Facilities</a></li>
+      /></span>
+      <nav class="header__hamburger" id="hamburger">
+        <span class="hamburger__icon" onclick="closeHamburger()">&times;</span>
+        <ul class="hamburger__list">
+          <li><a class="hamburger__link" href="landing.html">Home</a></li>
+          <li><a class="hamburger__link" href="concept.html">Concept</a></li>
+          <li><a class="hamburger__link" href="">Rooms</a></li>
+          <li><a class="hamburger__link" href="">Facilities</a></li>
         </ul>
       </nav>
-      <nav class="navigation__row">
-        <section class="navigation__row-box"><a class="navigation__row-link" href="landing.html">Home</a></section>
-        <section class="navigation__row-box--line-false"><a class="navigation__row-link" href="concept.html">Concept</a></section>
-        <section class="navigation__row-box--line-false"><a class="navigation__row-link" href="">Rooms</a></section>
-        <section class="navigation__row-box--line-false"><a class="navigation__row-link" href="">Facilities</a></section>
+      <nav class="header__navigation">
+          <a class="navigation__link navigation__link--border-true" href="landing.html">Home</a>
+          <a class="navigation__link navigation__link--border-false" href="concept.html">Concept</a>
+          <a class="navigation__link navigation__link--border-false" href="">Rooms</a>
+          <a class="navigation__link navigation__link--border-false" href="">Facilities</a>
       </nav>
-      <a href="booking.html">
-        <button class="button button--color-peach">Book a room</button>
-      </a>
+      <a class="header__button button button--color-peach" href="booking.html">Book a room</a>
     </header>
     <main class="hero">
-      <video class="background-video" autoplay muted loop>
-        <source src="Videos/water.mp4" type="video/mp4" />
+      <video class="hero__background" autoplay muted loop>
+        <source src="Videos/water.mp4" type="video/mp4"/>
       </video>
-      <img class="hero__logo" src="Images/logo/Logo_white_desktop_mobile.png" alt="" />
-      <p class="hero__text">We make eco-living modern</p>
-      <a href="concept.html">
-        <button class="button button--color-green">Our Concept</button>
-      </a>
-      <a href="">
-        <button class="button button--color-green">Rooms</button>
-      </a>
-    </main>
-    <footer class="footer">
-      <section class="footer__content">
-      <section class="footer__contact">
-      <h2 class="footer__heading">Contact us</h2>
-      <section class="footer__contactlist"> 
-        <p class="footer__contact-item">BONZ.AI Hotel</p>
-        <p class="footer__contact-item">Berwick</p>
-        <p class="footer__contact-item">Polegate BN26 6T</p>
-      </section>
-      <p class="footer__phonenumber">Tel: 01493-770-834</p>
-      <section class="footer__infolist">
-        <a class="footer__info-item" href="mailto: info@bonzai.com">info@bonzai.com</a>
-        <a class="footer__info-item" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/1920px-2ChocolateChipCookies.jpg">Cookies</a>
-        <a class="footer__info-item" href="https://www.politico.eu/cdn-cgi/image/width=1160,height=772,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/08/16/iStock-837345268.jpg">Privacy Policy</a>
-      </section>
-    </section>
-    <img class="footer__logo--desktop" src="Images/logo/Logo_white_desktop_mobile.png" alt=""/>
-      <section class="footer__social-media">
-        <section class="footer__social-media-and-button">
-      <h2 class="footer__heading">Social media</h2>
-      <section class="footer__social-media-icons">
-        <a class="footer__social-media-icon" href="https://www.facebook.com/"><i class="footer__social-media-icon ri-facebook-circle-fill"></i></a>
-        <a class="footer__social-media-icon" href="https://www.instagram.com/"><i class="footer__social-media-icon ri-instagram-fill"></i></a>
-        <a class="footer__social-media-icon" href="https://www.youtube.com/"><i class="footer__social-media-icon ri-youtube-fill"></i></a>
-        <a class="footer__social-media-icon" href="https://www.x.com/"><i class="footer__social-media-icon ri-twitter-x-line"></i></a>
-      </section>
-      <a class="footer__booking-button" href="booking.html">
-        <button class="button button--color-white">Book now</button>
-      </a>
-    </section>
-      </section>
       <img
-        class="footer__logo--mobile"
+        class="hero__logo"
         src="Images/logo/Logo_white_desktop_mobile.png"
         alt=""
       />
-      </section>
-      <p class="footer__copyright">© 2024 bonz.ai</p>
+      <h2 class="hero__text">We make eco-living modern</h2>
+      <a class="hero__button button button--color-green" href="concept.html">Our Concept</a>
+      <a class="hero__button button button--color-green" href="">Rooms</a>
+    </main>
+    <footer class="footer">
+        <section class="footer__contact">
+          <h2 class="footer__heading">Contact us</h2>
+          <section class="footer__contactlist">
+            <p class="footer__contact-item">BONZ.AI Hotel</p>
+            <p class="footer__contact-item">Berwick</p>
+            <p class="footer__contact-item">Polegate BN26 6T</p>
+          </section>
+          <p class="footer__phonenumber">Tel: 01493-770-834</p>
+          <section class="footer__infolist">
+            <a class="footer__info-item" href="mailto: info@bonzai.com"
+              >info@bonzai.com</a
+            >
+            <a
+              class="footer__info-item"
+              href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/1920px-2ChocolateChipCookies.jpg"
+              >Cookies</a
+            >
+            <a
+              class="footer__info-item"
+              href="https://www.politico.eu/cdn-cgi/image/width=1160,height=772,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/08/16/iStock-837345268.jpg"
+              >Privacy Policy</a
+            >
+          </section>
+        </section>
+        <img
+          class="footer__logo--desktop"
+          src="Images/logo/Logo_white_desktop_mobile.png"
+          alt=""
+        />
+        <section class="footer__social-media">
+          <section class="footer__social-media-and-button">
+            <h2 class="footer__heading">Social media</h2>
+            <section class="footer__social-media-icons">
+              <a
+                class="footer__social-media-icon"
+                href="https://www.facebook.com/"
+                ><i
+                  class="footer__social-media-icon ri-facebook-circle-fill"
+                ></i
+              ></a>
+              <a
+                class="footer__social-media-icon"
+                href="https://www.instagram.com/"
+                ><i class="footer__social-media-icon ri-instagram-fill"></i
+              ></a>
+              <a
+                class="footer__social-media-icon"
+                href="https://www.youtube.com/"
+                ><i class="footer__social-media-icon ri-youtube-fill"></i
+              ></a>
+              <a class="footer__social-media-icon" href="https://www.x.com/"
+                ><i class="footer__social-media-icon ri-twitter-x-line"></i
+              ></a>
+            </section>
+            <a class="footer__booking-button" href="booking.html">
+              <button class="button button--color-white">Book now</button>
+            </a>
+          </section>
+        </section>
+        <img
+          class="footer__logo--mobile"
+          src="Images/logo/Logo_white_desktop_mobile.png"
+          alt=""
+        />
     </footer>
+    <p class="footer__copyright">© 2024 bonz.ai</p>
   </body>
 </html>
