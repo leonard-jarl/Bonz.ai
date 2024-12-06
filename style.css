@@ -608,7 +608,7 @@ p {
   .navigation {
     display: flex;
     height: 2rem;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .navigation__link {

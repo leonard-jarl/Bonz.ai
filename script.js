@@ -17,7 +17,7 @@ $(document).on('scroll', function(){
 
 $(function() {
 
-  $('input[name="date"]').daterangepicker({
+  $('input[id="date"]').daterangepicker({
       autoUpdateInput: false,
       locale: {
           cancelLabel: 'Clear'
