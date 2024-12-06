@@ -1,5 +1,5 @@
 function openHamburger() {
-  document.getElementById("hamburger").style.width = "100%";
+  document.getElementById("hamburger").style.width = "101%";
 }
 
 function closeHamburger() {
@@ -7,10 +7,10 @@ function closeHamburger() {
 }
 
 $(document).on('scroll', function(){
-  if ( $(window).scrollTop() > 100) {
-      $('header').addClass('header--not-transparent');
+  if ( $(window).scrollTop() < 100) {
+      $('header').addClass('header--transparent');
   } else {
-      $('header').removeClass('header--not-transparent');
+      $('header').removeClass('header--transparent');
   }
 });
 

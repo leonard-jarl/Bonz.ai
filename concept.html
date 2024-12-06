@@ -1,81 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Welcome</title>
-    <link rel="icon" type="image/png" href="Images/logo/Logo_white_title.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
-      integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="icon" type="image/png" href="Images/logo/Logo.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
-    <header class="header">
-      <span class="navigation__icon--open"
-        ><img
-          src="Images/photos/hamburger.png"
-          onclick="openHamburger()"
-          alt=""
-      /></span>
-      <nav id="hamburger" class="header__navigation">
-        <span
-          class="navigation__icon navigation__icon--close"
-          onclick="closeHamburger()"
-          >&times;</span
-        >
-        <ul class="navigation__list">
-          <li><a class="navigation__link" href="landing.html">Home</a></li>
-          <li>
-            <a class="navigation__link" href="concept.html">Concept</a>
-          </li>
-          <li><a class="navigation__link" href="">Rooms</a></li>
-          <li><a class="navigation__link" href="">Facilities</a></li>
+    <header class="header header--transparent">
+      <img class="header__icon" src="Images/photos/hamburger.png" onclick="openHamburger()" alt="a hamburger icon"/>
+      <nav class="hamburger" id="hamburger">
+        <span class="hamburger__icon" onclick="closeHamburger()">&times;</span>
+        <ul class="hamburger__list">
+          <li class="hamburger__list-item"><a class="hamburger__link" href="landing.html" aria-label="click to go to homepage">Home</a></li>
+          <li class="hamburger__list-item"><a class="hamburger__link" href="concept.html" aria-label="click to go to concept-page">Concept</a></li>
+          <li class="hamburger__list-item"><a class="hamburger__link" href="" aria-label="click to go to page for rooms">Rooms</a></li>
+          <li class="hamburger__list-item"><a class="hamburger__link" href="" aria-label="click to go to page for facilities">Facilities</a></li>
         </ul>
       </nav>
-      <nav class="navigation__row">
-        <section class="navigation__row-box--line-false">
-          <a class="navigation__row-link" href="landing.html">Home</a>
-        </section>
-        <section class="navigation__row-box">
-          <a class="navigation__row-link" href="concept.html">Concept</a>
-        </section>
-        <section class="navigation__row-box--line-false">
-          <a class="navigation__row-link" href="">Rooms</a>
-        </section>
-        <section class="navigation__row-box--line-false">
-          <a class="navigation__row-link" href="">Facilities</a>
-        </section>
+      <nav class="navigation">
+          <a class="navigation__link navigation__link--border-false" href="landing.html" aria-label="click to go to homepage">Home</a>
+          <a class="navigation__link navigation__link--border-true" href="concept.html" aria-label="click to go to concept-page">Concept</a>
+          <a class="navigation__link navigation__link--border-false" href="" aria-label="click to go to page for rooms">Rooms</a>
+          <a class="navigation__link navigation__link--border-false" href="" aria-label="click to go to page for facilities">Facilities</a>
       </nav>
-      <a href="booking.html">
-        <button class="button button--color-peach">Book a room</button>
-      </a>
+      <a class="header__button button button--color-peach" href="booking.html" aria-label="click to go to booking page">Book a room</a>
     </header>
-    <aside class="about__hero">
-      <h1 class="hero__heading">Our vision</h1>
+    <aside class="concept-hero" aria-label="image of hotel front">
+      <h1 class="concept-hero__heading">Our vision</h1>
     </aside>
-    <main class="about__main">
-      <article class="about__article about__article--vision">
-        <section class="article__image article__image--oliver">
-          <p class="image__text">
+    <main class="concept-main">
+      <article class="article article--reverse">
+        <section class="article__image article__image--oliver" aria-label="image of Oribaa Bonzai, the founder of the original hotel">
+          <p class="article__image-text">
             <b>Oribaa Bonzai</b> - Founder of the original hotel
           </p>
         </section>
-        <section class="article__text">
-          <h1 class="article__heading--desktop">Our Concept</h1>
-          <p class="article__paragraph">
+        <section class="article__description">
+          <h1 class="article__heading article__heading--desktop">Our Concept</h1>
+          <p class="article__text">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum sequi
             asperiores voluptates, repudiandae quo explicabo voluptatem
             dignissimos itaque ex dolorem ullam non totam, sunt voluptatum
@@ -88,7 +58,7 @@
             aspernatur pariatur molestias fugit expedita deleniti a aliquam.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </p>
-          <p class="article__paragraph">
+          <p class="article__text">
             Eum sequi asperiores voluptates, repudiandae quo explicabo
             voluptatem dignissimos itaque ex dolorem ullam non totam, sunt
             voluptatum minus, quidem dolore ipsum magni? Fuga, expedita ab at
@@ -100,15 +70,15 @@
             similique aspernatur pariatur molestias fugit expedita deleniti a
             aliquam.
           </p>
-        </section>
+          </section>
       </article>
-      <article class="about__article about__article--eco">
-        <section class="article__image article__image--plant">
-          <h1 class="article__heading--mobile">Eco-friendly</h1>
+      <article class="article article--eco">
+        <section class="article__image article__image--plant" aria-label="image of plant">
+          <h1 class="article__heading article__heading--mobile">Eco-friendly</h1>
         </section>
-        <section class="article__text">
-          <h1 class="article__heading--desktop">Eco-friendly</h1>
-          <p class="article__paragraph">
+        <section class="article__description">
+          <h1 class="article__heading article__heading--desktop">Eco-friendly</h1>
+          <p class="article__text">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum sequi
             asperiores voluptates, repudiandae quo explicabo voluptatem
             dignissimos itaque ex dolorem ullam non totam, sunt voluptatum
@@ -118,7 +88,7 @@
             esse. Labore nulla beatae possimus nam ut exercitationem! Tenetur
             vitae ducimus facilis sequi.
           </p>
-          <p class="article__paragraph">
+          <p class="article__text">
             Minus itaque tempore quod, necessitatibus, ipsum recusandae labore
             blanditiis similique aspernatur pariatur molestias fugit expedita
             deleniti a aliquam. Lorem, ipsum dolor sit amet consectetur
@@ -129,19 +99,19 @@
             ducimus voluptate assumenda illo dolor maiores sunt dolorum
             laboriosam velit esse.
           </p>
-          <p class="article__paragraph">
+          <p class="article__text">
             “I had a vision of a place where we combine eco living without the
             need of modern limitations” - Oribaa Bonzai
           </p>
         </section>
       </article>
-      <article class="about__article about__article--zen">
-        <section class="article__image article__image--zen-garden">
-          <h1 class="article__heading--mobile">Zen-garden</h1>
+      <article class="article article--zengarden">
+        <section class="article__image article__image--zengarden" aria-label="image of the hotel's zen-garden">
+          <h1 class="article__heading article__heading--mobile">Zen-garden</h1>
         </section>
-        <section class="article__text">
-          <h1 class="article__heading--desktop">Zen-garden</h1>
-          <p class="article__paragraph">
+        <section class="article__description">
+          <h1 class="article__heading article__heading--desktop">Zen-garden</h1>
+          <p class="article__text">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum sequi
             asperiores voluptates, repudiandae quo explicabo voluptatem
             dignissimos itaque ex dolorem ullam non totam, sunt voluptatum
@@ -157,7 +127,7 @@
             dignissimos itaque ex dolorem ullam non totam, sunt voluptatum
             minus, quidem dolore ipsum magni?
           </p>
-          <p class="article__paragraph">
+          <p class="article__text">
             Fuga, expedita ab at error corrupti, voluptatibus officiis odit
             eaque facilis numquam ducimus voluptate assumenda illo dolor maiores
             sunt dolorum laboriosam velit esse. Labore nulla beatae possimus nam
@@ -166,77 +136,37 @@
             similique aspernatur pariatur molestias fugit expedita deleniti a
             aliquam.
           </p>
-        </section>
+          </section>
       </article>
     </main>
     <footer class="footer">
-      <section class="footer__content">
-        <section class="footer__contact">
-          <h2 class="footer__heading">Contact us</h2>
-          <section class="footer__contactlist">
-            <p class="footer__contact-item">BONZ.AI Hotel</p>
-            <p class="footer__contact-item">Berwick</p>
-            <p class="footer__contact-item">Polegate BN26 6T</p>
-          </section>
-          <p class="footer__phonenumber">Tel: 01493-770-834</p>
-          <section class="footer__infolist">
-            <a class="footer__info-item" href="mailto: info@bonzai.com"
-              >info@bonzai.com</a
-            >
-            <a
-              class="footer__info-item"
-              href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/1920px-2ChocolateChipCookies.jpg"
-              >Cookies</a
-            >
-            <a
-              class="footer__info-item"
-              href="https://www.politico.eu/cdn-cgi/image/width=1160,height=772,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/08/16/iStock-837345268.jpg"
-              >Privacy Policy</a
-            >
-          </section>
+      <section class="contact">
+        <h2 class="contact__heading">Contact us</h2>
+        <section class="contact__address-list">
+          <p class="contact__address-info">BONZ.AI Hotel</p>
+          <p class="contact__address-info">Berwick</p>
+          <p class="contact__address-info">Polegate BN26 6T</p>
         </section>
-        <img
-          class="footer__logo--desktop"
-          src="Images/logo/Logo_white_desktop_mobile.png"
-          alt=""
-        />
-        <section class="footer__social-media">
-          <section class="footer__social-media-and-button">
-            <h2 class="footer__heading">Social media</h2>
-            <section class="footer__social-media-icons">
-              <a
-                class="footer__social-media-icon"
-                href="https://www.facebook.com/"
-                ><i
-                  class="footer__social-media-icon ri-facebook-circle-fill"
-                ></i
-              ></a>
-              <a
-                class="footer__social-media-icon"
-                href="https://www.instagram.com/"
-                ><i class="footer__social-media-icon ri-instagram-fill"></i
-              ></a>
-              <a
-                class="footer__social-media-icon"
-                href="https://www.youtube.com/"
-                ><i class="footer__social-media-icon ri-youtube-fill"></i
-              ></a>
-              <a class="footer__social-media-icon" href="https://www.x.com/"
-                ><i class="footer__social-media-icon ri-twitter-x-line"></i
-              ></a>
-            </section>
-            <a class="footer__booking-button" href="booking.html">
-              <button class="button button--color-white">Book now</button>
-            </a>
-          </section>
+        <p class="contact__phonenumber">Tel: 01493-770-834</p>
+        <section class="contact__info-list">
+          <a class="contact__info-link" href="mailto: info@bonzai.com" aria-label="Click to send a mail to bonz.ai hotel">info@bonzai.com</a>
+          <a class="contact__info-link" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/1920px-2ChocolateChipCookies.jpg" aria-label="click to read about cookies">Cookies</a>
+          <a class="contact__info-link" href="https://www.politico.eu/cdn-cgi/image/width=1160,height=772,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/08/16/iStock-837345268.jpg" aria-label="click to go to privacy policy page">Privacy Policy</a>
         </section>
-        <img
-          class="footer__logo--mobile"
-          src="Images/logo/Logo_white_desktop_mobile.png"
-          alt=""
-        />
       </section>
+      <img class="footer__logo footer__logo--desktop" src="Images/logo/Logo.png" alt="image of the hotels logo"/>
+      <section class="social-media">
+          <h2 class="social-media__heading">Social media</h2>
+          <section class="social-media__icons">
+            <a class="social-media__link ri-facebook-circle-fill" href="https://www.facebook.com/" aria-label="click to go to facebook page"></a>
+            <a class="social-media__link ri-instagram-fill" href="https://www.instagram.com/" aria-label="click to go to instagram page"></a>
+            <a class="social-media__link ri-youtube-fill" href="https://www.youtube.com/" aria-label="click to go to youtube page"></a>
+            <a class="social-media__link ri-twitter-x-line" href="https://www.x.com/" aria-label="click to go to twitter page"></a>
+          </section>
+          <a class="social-media__button button button--color-white" href="booking.html" aria-label="click to go to booking page">Book now</a>
+      </section>
+      <img class="footer__logo footer__logo--mobile" src="Images/logo/Logo.png" alt="image of the hotels logo"/>
       <p class="footer__copyright">© 2024 bonz.ai</p>
-    </footer>
+  </footer>
   </body>
 </html>

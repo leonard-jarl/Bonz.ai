@@ -1,131 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Welcome</title>
-    <link rel="icon" type="image/png" href="Images/logo/Logo_white_title.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
-      integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="icon" type="image/png" href="Images/logo/Logo.png"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
-    <header class="header">
-      <span class="header__icon"
-        ><img
-          src="Images/photos/hamburger.png"
-          onclick="openHamburger()"
-          alt=""
-      /></span>
-      <nav class="header__hamburger" id="hamburger">
+    <header class="header header--transparent">
+      <img class="header__icon" src="Images/photos/hamburger.png" onclick="openHamburger()" alt="a hamburger icon"/>
+      <nav class="hamburger" id="hamburger">
         <span class="hamburger__icon" onclick="closeHamburger()">&times;</span>
         <ul class="hamburger__list">
-          <li><a class="hamburger__link" href="landing.html">Home</a></li>
-          <li><a class="hamburger__link" href="concept.html">Concept</a></li>
-          <li><a class="hamburger__link" href="">Rooms</a></li>
-          <li><a class="hamburger__link" href="">Facilities</a></li>
+          <li class="hamburger__list-item"><a class="hamburger__link" href="landing.html" aria-label="click to go to homepage">Home</a></li>
+          <li class="hamburger__list-item"><a class="hamburger__link" href="concept.html" aria-label="click to go to concept-page">Concept</a></li>
+          <li class="hamburger__list-item"><a class="hamburger__link" href="" aria-label="click to go to page for rooms">Rooms</a></li>
+          <li class="hamburger__list-item"><a class="hamburger__link" href="" aria-label="click to go to page for facilities">Facilities</a></li>
         </ul>
       </nav>
-      <nav class="header__navigation">
-          <a class="navigation__link navigation__link--border-true" href="landing.html">Home</a>
-          <a class="navigation__link navigation__link--border-false" href="concept.html">Concept</a>
-          <a class="navigation__link navigation__link--border-false" href="">Rooms</a>
-          <a class="navigation__link navigation__link--border-false" href="">Facilities</a>
+      <nav class="navigation">
+          <a class="navigation__link navigation__link--border-true" href="landing.html" aria-label="click to go to homepage">Home</a>
+          <a class="navigation__link navigation__link--border-false" href="concept.html" aria-label="click to go to concept-page">Concept</a>
+          <a class="navigation__link navigation__link--border-false" href="" aria-label="click to go to page for rooms">Rooms</a>
+          <a class="navigation__link navigation__link--border-false" href="" aria-label="click to go to page for facilities">Facilities</a>
       </nav>
-      <a class="header__button button button--color-peach" href="booking.html">Book a room</a>
+      <a class="header__button button button--color-peach" href="booking.html" aria-label="click to go to booking page">Book a room</a>
     </header>
     <main class="hero">
-      <video class="hero__background" autoplay muted loop>
-        <source src="Videos/water.mp4" type="video/mp4"/>
-      </video>
-      <img
-        class="hero__logo"
-        src="Images/logo/Logo_white_desktop_mobile.png"
-        alt=""
-      />
+      <video class="hero__background" src="Videos/water.mp4" type="video/mp4" autoplay muted loop></video>
+      <img class="hero__logo" src="Images/logo/Logo.png" alt="image of the hotels logo"/>
       <h2 class="hero__text">We make eco-living modern</h2>
-      <a class="hero__button button button--color-green" href="concept.html">Our Concept</a>
-      <a class="hero__button button button--color-green" href="">Rooms</a>
+      <a class="hero__button button button--color-green" href="concept.html" aria-label="click to go to concept-page">Our Concept</a>
+      <a class="hero__button button button--color-green" href="" aria-label="click to go to page for rooms">Rooms</a>
     </main>
     <footer class="footer">
-        <section class="footer__contact">
-          <h2 class="footer__heading">Contact us</h2>
-          <section class="footer__contactlist">
-            <p class="footer__contact-item">BONZ.AI Hotel</p>
-            <p class="footer__contact-item">Berwick</p>
-            <p class="footer__contact-item">Polegate BN26 6T</p>
+        <section class="contact">
+          <h2 class="contact__heading">Contact us</h2>
+          <section class="contact__address-list">
+            <p class="contact__address-info">BONZ.AI Hotel</p>
+            <p class="contact__address-info">Berwick</p>
+            <p class="contact__address-info">Polegate BN26 6T</p>
           </section>
-          <p class="footer__phonenumber">Tel: 01493-770-834</p>
-          <section class="footer__infolist">
-            <a class="footer__info-item" href="mailto: info@bonzai.com"
-              >info@bonzai.com</a
-            >
-            <a
-              class="footer__info-item"
-              href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/1920px-2ChocolateChipCookies.jpg"
-              >Cookies</a
-            >
-            <a
-              class="footer__info-item"
-              href="https://www.politico.eu/cdn-cgi/image/width=1160,height=772,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/08/16/iStock-837345268.jpg"
-              >Privacy Policy</a
-            >
+          <p class="contact__phonenumber">Tel: 01493-770-834</p>
+          <section class="contact__info-list">
+            <a class="contact__info-link" href="mailto: info@bonzai.com" aria-label="Click to send a mail to bonz.ai hotel">info@bonzai.com</a>
+            <a class="contact__info-link" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/1920px-2ChocolateChipCookies.jpg" aria-label="click to read about cookies">Cookies</a>
+            <a class="contact__info-link" href="https://www.politico.eu/cdn-cgi/image/width=1160,height=772,quality=80,onerror=redirect,format=auto/wp-content/uploads/2023/08/16/iStock-837345268.jpg" aria-label="click to go to privacy policy page">Privacy Policy</a>
           </section>
         </section>
-        <img
-          class="footer__logo--desktop"
-          src="Images/logo/Logo_white_desktop_mobile.png"
-          alt=""
-        />
-        <section class="footer__social-media">
-          <section class="footer__social-media-and-button">
-            <h2 class="footer__heading">Social media</h2>
-            <section class="footer__social-media-icons">
-              <a
-                class="footer__social-media-icon"
-                href="https://www.facebook.com/"
-                ><i
-                  class="footer__social-media-icon ri-facebook-circle-fill"
-                ></i
-              ></a>
-              <a
-                class="footer__social-media-icon"
-                href="https://www.instagram.com/"
-                ><i class="footer__social-media-icon ri-instagram-fill"></i
-              ></a>
-              <a
-                class="footer__social-media-icon"
-                href="https://www.youtube.com/"
-                ><i class="footer__social-media-icon ri-youtube-fill"></i
-              ></a>
-              <a class="footer__social-media-icon" href="https://www.x.com/"
-                ><i class="footer__social-media-icon ri-twitter-x-line"></i
-              ></a>
+        <img class="footer__logo footer__logo--desktop" src="Images/logo/Logo.png" alt="image of the hotels logo"/>
+        <section class="social-media">
+            <h2 class="social-media__heading">Social media</h2>
+            <section class="social-media__icons">
+              <a class="social-media__link ri-facebook-circle-fill" href="https://www.facebook.com/" aria-label="click to go to facebook page"></a>
+              <a class="social-media__link ri-instagram-fill" href="https://www.instagram.com/" aria-label="click to go to instagram page"></a>
+              <a class="social-media__link ri-youtube-fill" href="https://www.youtube.com/" aria-label="click to go to youtube page"></a>
+              <a class="social-media__link ri-twitter-x-line" href="https://www.x.com/" aria-label="click to go to twitter page"></a>
             </section>
-            <a class="footer__booking-button" href="booking.html">
-              <button class="button button--color-white">Book now</button>
-            </a>
-          </section>
+            <a class="social-media__button button button--color-white" href="booking.html" aria-label="click to go to booking page">Book now</a>
         </section>
-        <img
-          class="footer__logo--mobile"
-          src="Images/logo/Logo_white_desktop_mobile.png"
-          alt=""
-        />
+        <img class="footer__logo footer__logo--mobile" src="Images/logo/Logo.png" alt="image of the hotels logo"/>
+        <p class="footer__copyright">© 2024 bonz.ai</p>
     </footer>
-    <p class="footer__copyright">© 2024 bonz.ai</p>
   </body>
 </html>
